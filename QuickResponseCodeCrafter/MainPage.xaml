@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuickResponseCodeCrafter.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Entry x:Name="TextInput"
+                    Placeholder="QR-code content (eg.: WIFI:T:WPA2;S:NetworkName;P:NetworkPassword;;)"
+                    HorizontalOptions="Fill" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                
+                <Button x:Name="GenerateWiFiQRCodeBtn"
+                        Text="WiFi QR-code"
+                        Clicked="GenerateWiFiQRCodeBtn_Clicked"
+                        WidthRequest="150" />
+
+                <Button x:Name="GenerateQRCodeBtn"
+                        Text="Generate QR-code"
+                        Clicked="GenerateQRCodeBtn_Clicked"
+                        WidthRequest="150" />
+
+            </HorizontalStackLayout>
+            
+            <Image x:Name="QRCodeImage"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   Aspect="AspectFit" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
