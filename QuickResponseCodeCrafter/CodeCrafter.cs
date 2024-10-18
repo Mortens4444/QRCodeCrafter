@@ -21,7 +21,6 @@ public static class CodeCrafter
         };
 
         var pixelData = writer.Write(text);
-
         using var bitmap = new SKBitmap(pixelData.Width, pixelData.Height, SKColorType.Rgba8888, SKAlphaType.Premul);
         var ptr = bitmap.GetPixels();
         System.Runtime.InteropServices.Marshal.Copy(pixelData.Pixels, 0, ptr, pixelData.Pixels.Length);
